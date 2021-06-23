@@ -1,0 +1,1 @@
+No arquivo Maain contem todas as queries utilizadas para acessar as classes DAO e obter os dados do Banco de Dados

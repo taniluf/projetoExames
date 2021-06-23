@@ -1,0 +1,15 @@
+Ficaram faltando os seguintes ítens:
+
+ - Mostrar a listagem devido a problemas com a "http://java.sun.com/jsp/jstl/core".
+ - Fazer a classificação do "Nome do cliente" e "Nome do Exame" - poderia ter feito no banco
+   de dados, mas o uso da clausula"ORDER BY" não é recomendada por consumir muito recurso.
+ - Paginação da listagem acima.
+ - Consistir o CPF.
+ - Consistir data e hora válidas.
+ - Carregar os campos (Nome do Cliente, quando dado um CPF), (Nome do Exame quando dado um 
+   código de exame).
+ - Integridade referencial entre as tabelas, assim quando um cliente fosse excluido, o 
+   agendamento referente a este cliente tambem seriam excluídos; o mesmo ocorrendo para exames.
+ - Criar as páginas de exclusão e alteração de Clientes e Exames.
+ - Criar função para obter o ultimo id da tabela agenda e incrementar +1 dinamicamente na 
+   página Incluir agendamento.

@@ -1,0 +1,7 @@
+						"ESPECIFICAÇÕES DO AMBIENTE"
+
+Windows 10 64 Bits
+Banco de Dados : SQL Server/EXPRESS 15
+Java versão 8, atualização 291 (build 1.8.0_291-b10)
+TOMCAT v10.0.6
+Eclips IDE for Enterprise JAVA and Web Developers 2021-03 

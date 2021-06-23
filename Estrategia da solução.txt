@@ -1,0 +1,19 @@
+                        
+          					"ESTRATÉGIA DA SOLUÇÃO"
+ REGRAS:
+ 
+ 1 - Data do exame só poderá ser maior que a atual
+ 2 - Tabela com a listagem deverá ser ordenada por nome do paciente e do exame. 
+ 3 - O nome do paciente deverá ser unico.        
+                     
+                     
+ SOLUÇÃO:
+ 
+ 1 - Efetuada consistencia através de função no JavaScript, obtendo a data do dia , 
+     comparando com a data digitada e enviando alerta quando a data digitada for menor.
+ 2 - Poderia ser feita através de claudula ORDER BY de da query, mas como degrada muito
+     a performance será feita na propria paginação, porem devido ao problema com o 
+     http://java.sun.com/jstl/core não foi completada.
+ 3 - Criada a tabela cliente para que através da coluna CPF possa garantir que o cliente 
+     seja unico, mesmo q haja erro na digitação de seu nome. Desta mesma maneira
+     foi criada a tabela exame, evitando duplicidade de exames.                  

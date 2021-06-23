@@ -1,0 +1,41 @@
+                              												"NAVEGAÇÃO WEB"
+                              
+                              
+ 1 - Index.jsp -+--> addagendamento.jsp(Incluir novo agendamento) 
+                |          |
+                |          +-> addagendamento.html (Submete novo agendamento) 
+                |                     |
+                |                     +-> incluiragendamento.jsp -> addagendamentosuccess.jsp (Inclusão com sucesso)                       
+                |                                   |
+                |                                   +-------------> addagendamentoerror.jsp   (Erro na inclusão)
+                |             
+                +--> addcliente.jsp(Incluir novo cliente) 
+                |          |
+                |          +-> addcliente.html (Submete novo cliente) 
+                |                     |
+                |                     +-> incluircliente.jsp -> addclientesuccess.jsp (Inclusão com sucesso)                       
+                |                                   |
+                |                                   +-------------> addclienteerror.jsp (Erro na inclusão)
+                |
+                +--> addaexame.jsp(Incluir novo exame) 
+                |          |
+                |          +-> addexame.html (Submete novo exame) 
+                |                     |
+                |                     +-> incluirexame.jsp -> addexamesuccess.jsp (Inclusão com sucesso)                       
+                |                                   |
+                |                                   +-------------> addexameerror.jsp   (Erro na inclusão)
+                |
+                +--> viewAgenda.jsp    (Lista de agendamentos)
+                       | |
+                       | +----> editagendamento.jsp (Alterar um agendamento) -> editagenda.jsp (Efetua alteração)
+                       | |
+                       | +----> deleteagenda.jsp (Excluir um agendamento)
+                       | 
+                       |
+                       +------> addagendamento.jsp(Incluir novo agendamento)
+                                      |
+                                      +-> addagendamento.html (Submete novo agendamento)
+                                                 | 
+                                                 +-> incluiragendamento.jsp -> addagendamentosuccess.jsp (Inclusão com sucesso)
+                                                               |
+                                                               +-------------> addagendamentoerror.jsp   (Erro na inclusão)

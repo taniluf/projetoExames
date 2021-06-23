@@ -1,0 +1,42 @@
+
+
+				 "DIAGRAMA DO BANCO DE DADOS agenda_exames"
+				 
+				
+ ___________________                                   _________________              
+|__Tabela cliente___|1                               1|__Tabela exame___|
+|__numCPF__ PK______|-+                             +-|__codExame__PK___|
+|__nomePessoa_______| |                             | |__nomeExame______|
+                      |     ____________________    |
+                      |    |__Tabela agenda_____|   |
+                      |N   |__id__PK_incremental|   |
+                      +->  |__numCPF____________|  N|
+                           |__codExame__________| <-+
+                           |__dataExame_________|
+                           |__horaExame_________|
+                           |__obsResultExame____|
+
+
+
+                    	   "DICIONARIO DE DADOS"
+  
+    ______________________________________________________________________
+   | COLUNA        | DESCRIÇÃO                     | TIPO/TAMANHO | NULOS |
+   |_______________|_______________________________|______________|_______|
+   |codExame       | Codigo do exame               | varchar(05)  | não   |
+   |dataExame      | Data Exame                    | varchar(08)  | não   |
+   |horaExame      | Hora exame                    | varchar(04)  | não   |
+   |id             | Id - incremental              | int          | não   |  
+   |nomeExame      | Nome Exame                    | varchar(50)  | não   |
+   |nomePessoa     | Nome Paciente                 | varchar(50)  | não   |
+   |numCPF         | Numero do CPF                 | varchar(11)  | não   |
+   |obsResultExame | Observação/Resultado de Exame | varchar(50)  | sim   |
+   |______________________________________________________________________|   
+   
+   
+   
+   
+   
+   
+   
+   
