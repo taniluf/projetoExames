@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cadastrar Novo Exame</title>
+
+<script type="text/javascript" src="consist.js"></script>
+<link rel="stylesheet" href="styles.css">
+<style>
+	.box{
+	background-image: url(C:\Users\Tania\eclipse-workspace\Exames\src\main\webapp\WEB-INF\fundo.jpg);
+	}
+</style>
+</head>
+<body>
+
+
+<h1 align="center">Cadastrar novo Exame</h1>
+
+<img alt="" src="C:\Users\Tania\eclipse-workspace\Exames\src\main\webapp\WEB-INF\fundo.jpg" height="90" width="150">
+
+<form action="incluirexame.jsp" method="post" name="form1">
+  <div style=""C:\Users\Tania\eclipse-workspace\Exames\src\main\webapp\WEB-INF\fundo.jpg"">
+  	
+   	<fieldset>
+     	<ol>          
+		   <table>
+				<tr>
+					<td>Cod. Exame : </td>
+					<td><input name="codExame" id="codExame" type="text" maxlength="5" onkeydown="mascaraMutuario(this,num,event)" onblur="clearTimeout()" style="width:130px;border: 1px #06739E solid;" /></td>
+				</tr>
+				
+				<tr>
+					<td>Nome do Exame: </td> 
+					<td><input type="text" name="nomeExame" id="nomeExame" maxlength="50"  style="width:390px;border: 1px #06739E solid;" /></td>
+				</tr>
+				<td colspan="2">
+					<input type="submit" value="Incluir"/>
+					</td>
+					<td colspan="2">
+					<input type="button" value="Voltar" onclick="voltar()" />
+					</td>
+				</tr>
+			</table>
+		</ol>
+	</fieldset>
+  </div>
+  <div>
+	<fieldset>
+  			  <ol>        
+		<p id="rodape">
+       		© Copyright 2021- Tania Maluf - Projeto SOCTest.
+   		</p>
+   	  </ol> 
+   	</fieldset>  
+  </div>	
+</form>	
+</body>
+</html>

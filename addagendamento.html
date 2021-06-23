@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Agendamento de Exames</title>
+
+<script type="text/javascript" src="consist.js"></script>
+<link rel="stylesheet" href="styles.css">
+<style>
+	.box{
+	background-image: url(C:\Users\Tania\eclipse-workspace\Exames\src\main\webapp\WEB-INF\fundo.jpg);
+	}
+</style>
+</head>
+<body>
+
+
+<h1 align="center">Cadastrar novo agendamento de exame</h1>
+
+<img alt="" src="C:\Users\Tania\eclipse-workspace\Exames\src\main\webapp\WEB-INF\fundo.jpg" height="90" width="150">
+
+<form action="incluiragendamento.jsp" method="post" name="form1">
+  <div style=""C:\Users\Tania\eclipse-workspace\Exames\src\main\webapp\WEB-INF\fundo.jpg"">
+  	
+   	<fieldset>
+     	<ol>          
+		   <table>
+				<tr>
+					<td>Id : </td>
+					<td><input type="text" name="id" maxlength="2" onkeydown="mascaraMutuario(this,num,event)" onblur="clearTimeout()" style="width:130px;border: 1px #06739E solid;" /></td>
+				</tr>
+				<tr>
+					<td>CPF : </td>
+					<td><input name="numCPF" id="numCPF" type="text" maxlength="14" onkeydown="mascaraMutuario(this,cpfCnpj,event)" onblur="clearTimeout()" style="width:130px;border: 1px #06739E solid;" />Vem nome p/ confirmação</td>
+				</tr>
+				<tr>
+					<td>Cod. Exame: </td>
+					<td>
+						<select name="codExame" id="codExame">
+							<option>00001</option>
+							<option>00002</option>
+							<option>00003</option>
+							<option>00004</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Data do Exame : </td> 
+					<td><input type="text" name="dataExame" id="dth" maxlength="10" onkeydown="mascaraMutuario(this,data,event)" onblur="clearTimeout()" style="width:130px;border: 1px #06739E solid;" />Digitar DD/MM/AAAA</td>
+				</tr>
+				<tr>
+					<td>Hora Exame : </td>
+					<td><input type="text" name="horaExame"  id="horaExame" maxlength="5" onkeydown="mascaraMutuario(this,hora,event)" onblur="clearTimeout()" style="width:130px;border: 1px #06739E solid;"/>Digitar HH:MM</td>
+				</tr>
+				<tr>
+					<td>Obs/Resultado do Exame : </td>
+					<td><input type="text" name="obsResultExame" id="obsResultExame" maxlength="50" style="width:390px;border: 1px #06739E solid;"/></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<input type="button" value="Incluir" onclick="consdata()" />
+					</td>
+					<td colspan="2">
+					<input type="button" value="Voltar" onclick="voltar()" />
+					</td>
+				</tr>
+			</table>
+		</ol>
+	</fieldset>
+  </div>
+  <div>
+	<fieldset>
+  			  <ol>        
+		<p id="rodape">
+       		© Copyright 2021- Tania Maluf - Projeto SOCTest.
+   		</p>
+   	  </ol> 
+   	</fieldset>  
+  </div>	
+<script>
+
+        var v_obj;
+        var v_fun;
+        var keyCode;
+        function mascaraMutuario(o, f, e) {
+            v_obj = o;
+            v_fun = f;
+            keyCode = e.keyCode;
+            setTimeout('execmascara()', 1);
+        }
+
+        function execmascara() {
+            var c = String.fromCharCode(keyCode);
+            var isWordcharacter = c.match(/\w/);
+            var isDigit = (keyCode === 8 || keyCode === 46 || (keyCode >= 48 && keyCode <= 57) || (keyCode >= 96 && keyCode <= 105));
+            if (isWordcharacter || isDigit) {
+                v_obj.value = v_fun(v_obj.value);
+            }
+        }
+
+        function cpfCnpj(v) {
+            //Remove tudo o que não é dígito
+            v = v.replace(/\D/g, "");
+
+            if (v.length <= 11) { //CPF
+                //Coloca um ponto entre o terceiro e o quarto dígitos
+                v = v.replace(/(\d{3})(\d)/, "$1.$2");
+                //Coloca um ponto entre o terceiro e o quarto dígitos
+                //de novo (para o segundo bloco de números)
+                v = v.replace(/(\d{3})(\d)/, "$1.$2");
+                //Coloca um hífen entre o terceiro e o quarto dígitos
+                v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+            } else { 
+            }
+
+            return v;
+        }
+        
+        function data(v) {
+            //Remove tudo o que não é dígito
+            v = v.replace(/\D/g, "");
+
+            if (v.length <= 10) { //data DDMMAAAA
+                //Coloca uma barra entre o segundo e o terceiro dígitos
+                v = v.replace(/(\d{2})(\d)/, "$1/$2");
+                //Coloca uma barra entre o segundo e o terceiro dígitos
+                //de novo (para o segundo bloco de números)
+                v = v.replace(/(\d{2})(\d)/, "$1/$2");
+                
+            } else { 
+            }
+
+            return v;
+        }
+
+        function hora(v) {
+            //Remove tudo o que não é dígito
+            v = v.replace(/\D/g, "");
+
+            if (v.length <= 5) { //hora HHMM
+                //Coloca dois pontos entre o segundo e o terceiro dígitos
+                v = v.replace(/(\d{2})(\d)/, "$1:$2");
+                                
+            } else { 
+            }
+
+            return v;
+        }
+        
+        function num(v) {
+            //Remove tudo o que não é dígito
+            v = v.replace(/\D/g, "");
+
+            return v;
+        }
+        
+        function voltar() {
+        	history.go(-1);
+            }
+       
+
+    </script>
+</form>	
+</body>
+</html>

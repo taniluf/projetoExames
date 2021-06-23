@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cadastrar Cliente Novo</title>
+
+<script type="text/javascript" src="consist.js"></script>
+<link rel="stylesheet" href="styles.css">
+<style>
+	.box{
+	background-image: url(C:\Users\Tania\eclipse-workspace\Exames\src\main\webapp\WEB-INF\fundo.jpg);
+	}
+</style>
+</head>
+<body>
+
+
+<h1 align="center">Cadastrar novo Cliente</h1>
+
+<img alt="" src="C:\Users\Tania\eclipse-workspace\Exames\src\main\webapp\WEB-INF\fundo.jpg" height="90" width="150">
+
+<form action="incluircliente.jsp" method="post" name="form1">
+  <div style=""C:\Users\Tania\eclipse-workspace\Exames\src\main\webapp\WEB-INF\fundo.jpg"">
+  	
+   	<fieldset>
+     	<ol>          
+		   <table>
+				<tr>
+					<td>CPF : </td>
+					<td><input name="numCPF" id="numCPF" type="text" maxlength="14" onkeydown="mascaraMutuario(this,cpfCnpj,event)" onblur="clearTimeout()" style="width:130px;border: 1px #06739E solid;" /></td>
+				</tr>
+				
+				<tr>
+					<td>Nome do Cliente : </td> 
+					<td><input type="text" name="nomePessoa" id="nomePessoa" maxlength="50"  style="width:390px;border: 1px #06739E solid;" /></td>
+				</tr>
+				<td colspan="2">
+					<input type="button" value="Incluir" onclick="incpf()" />
+					</td>
+					<td colspan="2">
+					<input type="button" value="Voltar" onclick="voltar()" />
+					</td>
+				</tr>
+			</table>
+		</ol>
+	</fieldset>
+  </div>
+  <div>
+	<fieldset>
+  			  <ol>        
+		<p id="rodape">
+       		© Copyright 2021- Tania Maluf - Projeto SOCTest.
+   		</p>
+   	  </ol> 
+   	</fieldset>  
+  </div>	
+</form>	
+</body>
+</html>

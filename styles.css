@@ -1,0 +1,36 @@
+@charset "ISO-8859-1";
+
+body{
+	background-color: #ccccff; /* Green */
+} 
+
+
+
+td {
+	color: blue;
+	font-family: courier;
+	font-size: 100%;
+}
+
+button {
+  background-color: #0000a0; /* Green */
+  border: none;
+  color: #0000ff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+a {
+	color: blue;
+	font-family: courier;
+	font-size: 100%;
+}
+p {
+	color: blue;
+	font-family: courier;
+	font-size: 70%;
+	text-align: center;
+	min-height: 300px;
+}
